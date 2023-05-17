@@ -4,15 +4,11 @@ import requestIp from 'request-ip'
 
 export default class AlternativeController {
   async myGeo(req: Request, res: Response): Promise<Response> {
-    const myIP = req.clientIp as string
-    const normalIp = req.ip
     const clientIp = requestIp.getClientIp(req) as string
-    const ifonIP = geoip.lookup(myIP)
+    const ifonIP = geoip.lookup(clientIp)
     return res.status(200).json({
       ok: true,
-      myIP: `My ip ${myIP}`,
       clientIp: `Client IP ${clientIp}`,
-      normalIp,
       ifonIP
     })
   }
