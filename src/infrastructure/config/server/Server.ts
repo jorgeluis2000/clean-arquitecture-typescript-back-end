@@ -48,6 +48,7 @@ export default class Server {
 
   private middlewares(): void {
     this._httpServer.use(cors())
+    this._httpServer.set('trust proxy', true)
     this._httpServer.use((_, res: Response, next: NextFunction) => {
       res.header('Access-Control-Allow-Origin', '*')
       res.header(
