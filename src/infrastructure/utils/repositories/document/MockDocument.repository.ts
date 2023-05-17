@@ -23,20 +23,20 @@ export class MockDocumentRepository implements IDocumentRepository {
   }
 
   public async listDocuments(
-    idUser: string,
-    limit: number,
-    page: number
+    _idUser: string,
+    _limit: number,
+    _page: number
   ): Promise<DocumentEntity[]> {
     throw new Error('Not implement function')
   }
 
-  public async countDocuments(idUser: string): Promise<number> {
+  public async countDocuments(_idUser: string): Promise<number> {
     return 0
   }
 
   public async deleteDocument(
-    idUser: string,
-    idDocument: string
+    _idUser: string,
+    _idDocument: string
   ): Promise<boolean> {
     return false
   }

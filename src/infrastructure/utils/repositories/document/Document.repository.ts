@@ -3,33 +3,33 @@ import { type DocumentRepository as IDocumentRepository } from '@myapp-domain/re
 
 export class DocumentRepository implements IDocumentRepository {
   public async createADocument(
-    newDocument: DocumentEntity
+    _newDocument: DocumentEntity
   ): Promise<DocumentEntity | null> {
     throw new Error('Method not implemend')
   }
 
   public async findDocumentById(
-    idUser: string,
-    idDocument: string
+    _idUser: string,
+    _idDocument: string
   ): Promise<DocumentEntity | null> {
     throw new Error('Method not implemend')
   }
 
   public async listDocuments(
-    idUser: string,
-    limit: number,
-    page: number
+    _idUser: string,
+    _limit: number,
+    _page: number
   ): Promise<DocumentEntity[]> {
     throw new Error('Method not implemend')
   }
 
-  public async countDocuments(idUser: string): Promise<number> {
+  public async countDocuments(_idUser: string): Promise<number> {
     throw new Error('Method not implemend')
   }
 
   public async deleteDocument(
-    idUser: string,
-    idDocument: string
+    _idUser: string,
+    _idDocument: string
   ): Promise<boolean> {
     throw new Error('Method not implemend')
   }
