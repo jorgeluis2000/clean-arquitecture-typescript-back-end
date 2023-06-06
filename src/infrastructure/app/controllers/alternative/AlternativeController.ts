@@ -7,6 +7,7 @@ export default class AlternativeController {
     const device_clinet = req.headers['user-agent']
     const clientIp = requestIp.getClientIp(req) as string
     const infoIp = geoip.lookup(clientIp)
+    const result = {}
     return res.status(200).json({
       ok: true,
       clientIp: `Client IP ${clientIp}`,
